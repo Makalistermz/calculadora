@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script src="calculadora.js"></script>
-
     <main>
 
     <h1 id="titulo">Calculadora</h1>
@@ -17,31 +15,31 @@
 
             <div id="calculo">
 
-                <div id="resultados"></div>
+                <input type="text" id="resultados">
 
-                    <input type="button" value="C" class="botoes1" id="btC">
+                    <input type="reset" value="C" class="botoes1" id="btC">
                     <input type="button" value="&#9003;" class="botoes1" id="btapagar">
                     <input type="button" value="%" class="botoes1" id="btporcento">
                     <input type="button" value="&#247;" class="botoes1" id="divisao">
 
-                    <input type="button" value="9" class="botoes1">
-                    <input type="button" value="8" class="botoes1">
-                    <input type="button" value="7" class="botoes1">
+                    <button id="n9" class="botoes1">9</button>
+                    <button id="n8" class="botoes1">8</button>
+                    <button id="n7" class="botoes1">7</button>
                     <input type="button" value="&#215;" class="botoes1" id="vezes">
 
-                    <input type="button" value="6" class="botoes1">
-                    <input type="button" value="5" class="botoes1">
-                    <input type="button" value="4" class="botoes1">
+                    <button id="n6" class="botoes1">6</button>
+                    <button id="n5" class="botoes1">5</button>
+                    <button id="n4" class="botoes1">4</button>
                     <input type="button" value="-" class="botoes1" id="menos">
 
-                    <input type="button" value="3" class="botoes1">
-                    <input type="button" value="2" class="botoes1">
-                    <input type="button" value="1" class="botoes1">
+                    <button id="n3" class="botoes1">3</button>
+                    <button id="n2" class="botoes1">2</button>
+                    <button id="n1" class="botoes1">1</button>
                     <input type="button" value="+" class="botoes1" id="mais">
 
-                    <input type="button" value="00" class="botoes1">
-                    <input type="button" value="0" class="botoes1">
-                    <input type="button" value="," class="botoes1" id="virgula">                    
+                    <button id="n00" class="botoes1">00</button>
+                    <button id="n0" class="botoes1">0</button>
+                    <input type="button" value="," class="botoes1"id="virgula">                    
                     <input type="button" value="=" class="botoes1" id="igual">
 
             </div>
@@ -49,6 +47,6 @@
         </section>
 
     </main>
-
+    <script src="calculadora.js"></script>
 </body>
 </html>
