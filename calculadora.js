@@ -20,6 +20,12 @@ let n00 = document.getElementById("n00");
 
 let n0 = document.getElementById("n0");
 
+let btmais = document.getElementById("mais");
+
+let btmenos = document.getElementById("menos")
+
+let btigaul = document.getElementById("igual");
+
 num1.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
@@ -84,4 +90,22 @@ n0.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
     display.value += '0'
+});
+
+btmais.addEventListener("click", function() {
+    let display = document.getElementById("resultados");
+
+    display.value += "+"
+});
+
+btmenos.addEventListener("click", function() {
+    let display = document.getElementById("resultados")
+
+    display.value += "-"
 })
+
+btigaul.addEventListener("click", function() {
+    let display = document.getElementById("resultados");
+
+    display.value = eval (display.value); //calcula a espressão inteira
+});
