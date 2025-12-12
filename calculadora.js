@@ -20,11 +20,23 @@ let n00 = document.getElementById("n00");
 
 let n0 = document.getElementById("n0");
 
+let ponto = document.getElementById("ponto");
+
 let btmais = document.getElementById("mais");
 
-let btmenos = document.getElementById("menos")
+let btmenos = document.getElementById("menos");
+
+let btvezes = document.getElementById("vezes");
+
+let btdivisao = document.getElementById("divisao");
+
+let btporcento = document.getElementById("btporcento");
 
 let btigaul = document.getElementById("igual");
+
+let btC = document.getElementById("btC");
+
+let btapagar = document.getElementById("btapagar")
 
 num1.addEventListener("click", function() {
     let display = document.getElementById("resultados");
@@ -35,77 +47,117 @@ num1.addEventListener("click", function() {
 num2.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "2"
+    display.value += "2";
 });
 
 num3.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "3"
+    display.value += "3";
 });
 
 num4.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "4"
+    display.value += "4";
 });
 
 num5.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "5"
+    display.value += "5";
 });
 
 num6.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "6"
+    display.value += "6";
 });
 
 num7.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "7"
+    display.value += "7";
 });
 
 num8.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "8"
+    display.value += "8";
 });
 
 num9.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "9"
+    display.value += "9";
 });
 
 n00.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "00"
+    display.value += "00";
 });
 
 n0.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += '0'
+    display.value += '0';
+});
+
+ponto.addEventListener("click", function() {
+    let display = document.getElementById("resultados")
+
+    display.value += ".";
 });
 
 btmais.addEventListener("click", function() {
     let display = document.getElementById("resultados");
 
-    display.value += "+"
+    display.value += "+";
 });
 
 btmenos.addEventListener("click", function() {
-    let display = document.getElementById("resultados")
+    let display = document.getElementById("resultados");
 
-    display.value += "-"
-})
+    display.value += "-";
+});
+
+btvezes.addEventListener("click", function() {
+    let display = document.getElementById("resultados");
+
+    display.value += "*";
+});
+
+btdivisao.addEventListener("click", function() {
+    let display = document.getElementById("resultados");
+
+    display.value += "/";
+});
+
+btporcento.addEventListener("click", function() {
+    let display = document.getElementById("resultados");
+
+    display.value += "%";
+});
+
+btC.addEventListener("click", function() {
+    let display = document.getElementById("resultados");
+
+    display.value = "";
+});
+
+btapagar.addEventListener("click", function() {
+    let display = document.getElementById("resultados");
+
+    display.value = display.value.slice(0, -1);  
+});
 
 btigaul.addEventListener("click", function() {
     let display = document.getElementById("resultados");
+    let expr = display.value;
 
-    display.value = eval (display.value); //calcula a espressão inteira
+    // Substitui "10%50" por "10/100*50"
+    expr = expr.replace(/(\d+)%(\d+)/g, "($1/100*$2)");
+
+    display.value = eval(expr);
 });
